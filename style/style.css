@@ -102,7 +102,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 120vh;
-    clip-path: polygon(0 0,100% 0,100% 100%,80% 95%,0% 100%);
 }
 .banner{
     height: 100%;
@@ -366,12 +365,18 @@ span{
     background: transparent;
 }
 /* ---------- Diet Section ---------- */
+.diet .content{
+    flex-direction: column;
+}
 .diet .content .row{
     display: flex;
     position: relative;
     width: 100%;
     padding: 20px 0;
     justify-content: center;
+}
+.diet .content .row:nth-child(odd) .a{
+    order: 2;
 }
 .diet .content .row .cols{
     position: relative;
@@ -381,6 +386,10 @@ span{
 .diet .content .row .cols .heading{
     font-size: 2em;
     color: #ff8502;
+    text-transform: capitalize;
+}
+.diet .content .row:nth-child(odd) .cols .heading{
+    color: #02a3ff;
 }
 .diet .content .row .cols .boxes{
     position: relative;
