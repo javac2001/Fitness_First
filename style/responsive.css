@@ -1,0 +1,48 @@
+/* ---------- Root Variable ---------- */
+:root{
+    --primary-color: #00ff34;
+    --secondary-color:#1a1919;
+    --another-color-first:#131b2b;
+    --another-color-second:#d7d7d7;
+}
+/* Navigation bar */
+.navBar{
+    padding: 0 60px;
+}
+.navBar ol{
+    display: none;
+}
+.navBar ol.active{
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+}
+
+
+.navBar .toggle{
+    background: url(/image/menubar.jpg);
+    height: 25px;
+    width: 25px;
+    margin: auto 0;
+    cursor: pointer;
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    transition: all 0.2s ease-in-out 0s;
+}
+.navBar .toggle.active{
+    background: url(/image/close.png);
+    filter: invert(1);
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+}
